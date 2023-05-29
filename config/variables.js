@@ -5,5 +5,9 @@ exports.app = {
 };
 
 exports.db = {
-  DB_URI: process.env.DB_URI,
+  URI: process.env.DB_URI,
+};
+
+exports.jwt = {
+  SECRET: process.env.JWT_SECRET,
 };
