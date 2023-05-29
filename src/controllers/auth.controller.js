@@ -73,3 +73,15 @@ exports.register = asyncErrorHandler(async (req, res, next) => {
     "Registered successfully."
   );
 });
+
+exports.getProfile = asyncErrorHandler(async (req, res, next) => {
+  const user = req.user;
+
+  return sendResponse(
+    res,
+    constants.STATUS_CODES.OK,
+    true,
+    user,
+    "User found successfully."
+  );
+});

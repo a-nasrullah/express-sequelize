@@ -19,3 +19,8 @@ exports.signJWT = (payload) => {
   });
   return token;
 };
+
+exports.verifyJWT = (token) => {
+  const payload = jwt.verify(token, variables.jwt.SECRET);
+  return payload;
+};
