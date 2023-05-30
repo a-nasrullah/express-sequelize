@@ -1,8 +1,8 @@
-const User = require("../models/user.model");
+const { User } = require("../models");
 
 exports.checkUserExistance = async (filter) => {
   try {
-    const user = await User.findOne(filter);
+    const user = await User.findOne({ where: filter });
     return user;
   } catch (error) {
     throw error;
@@ -20,7 +20,7 @@ exports.createUser = async (data) => {
 
 exports.findUserById = async (id) => {
   try {
-    const user = await User.findById(id);
+    const user = await User.findByPk(id);
     return user;
   } catch (error) {
     throw error;

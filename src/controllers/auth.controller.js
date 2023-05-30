@@ -27,7 +27,7 @@ exports.login = asyncErrorHandler(async (req, res, next) => {
       )
     );
 
-  const token = signJWT({ id: user._id });
+  const token = signJWT({ id: user.id });
 
   return sendResponse(
     res,
@@ -63,7 +63,7 @@ exports.register = asyncErrorHandler(async (req, res, next) => {
       )
     );
 
-  const token = signJWT({ id: newUser._id });
+  const token = signJWT({ id: newUser.id });
 
   return sendResponse(
     res,

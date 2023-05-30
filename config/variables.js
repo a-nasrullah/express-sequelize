@@ -5,7 +5,11 @@ exports.app = {
 };
 
 exports.db = {
-  URI: process.env.DB_URI,
+  HOST: process.env.DB_HOST,
+  NAME: process.env.DB_NAME,
+  USER: process.env.DB_USER,
+  PASS: process.env.DB_PASS,
+  DIALECT: process.env.DB_DIALECT,
 };
 
 exports.jwt = {
